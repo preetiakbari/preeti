@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <title>Dashboard</title>
+
+  <!-- Bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <!-- Bundel file -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+    
+  <!-- font-family : Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- font awesome icons  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="css/responsive-style.css"> -->
+</head>
+
+<body>
+  <% if (message==='Login successful' ) { %>
+    <script>
+      alert('<%= message %>');
+    </script>
+    <% } %>
+
+      <!-- Navbar section -->
+      <!-- Navbar section -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container px-0">
+          <a class="navbar-brand mx-0" href="#"><img src="images/Logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  py-0 m-auto text-center navbar-brand ">
+              <li class="nav-item   ">
+                <a class="nav-link" href="http://localhost:3000 ">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="http://localhost:3001/Service">Service</a>
+              </li>
+              <li class="nav-item  ">
+                <a class="nav-link" href="http://localhost:3001/Feature">Feature</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="http://localhost:3001/Product">Product</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="http://localhost:3001/Testimonial">Testimonial</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="http://localhost:3001/FAQ">FAQ</a>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav text-center mx-4">
+
+              <li class="nav-item dropdown text-center">
+                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end text-center bg-body-tertiary"
+                  aria-labelledby="navbarDropdown">
+
+                  <li><a class="dropdown-item" href="#">
+                      <%= user.name %>
+                    </a></li>
+                  <li><a class="dropdown-item" href="#">
+                      <%= user.email %>
+                    </a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li>
+                    <button class="btn1 ms-lg-3 my-lg-0 my-sm-3">
+                      <a href="http://localhost:3001/">Log out</a>
+
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <!-- <li>
+                        <button class="btn1 ms-lg-3 my-lg-0 my-sm-3">
+                            <a href="#">Log out</a>
+
+                        </button>
+                    </li> -->
+              <!-- <li>
+                        <button class="btn0 my-lg-0 ">
+                            <a href="#">Login</a>
+
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn1 ms-lg-3 my-lg-0 my-sm-3">
+                            <a href="#">Sign up</a>
+
+                        </button>
+                    </li> -->
+
+            </ul>
+
+          </div>
+
+
+        </div>
+      </nav>
+
+
+
+
+      <!-- hero/main -->
+      <section class="main bg-body-tertiary py-5">
+        <div class="container mt-5">
+          <div class="row row1">
+
+            <div class="col-lg-4 order-lg-1  ">
+              <img src="images/Illustration.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-8 my-5 order-lg-0">
+              <h1>Lessons and insights <br> <span>from 8 years</span></h1>
+              <p>Where to grow your business as a photographer: site or social media?</p>
+              <button class="btn2"><a href="">Register</a></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- client -->
+      <section class="clie">
+        <div class="container py-4 ">
+
+          <h1>Our Clients</h1>
+          <p>We have been working with some Fortune 500+ clients</p>
+
+          <div class="row py-4 row1">
+
+            <div class="col-1 m-auto col1">
+              <img src="images/Logo1.jpg" alt="">
+            </div>
+            <div class="col-1 m-auto col1">
+              <img src="images/Logo2.jpg" alt="">
+            </div>
+            <div class="col-1 m-auto col1">
+              <img src="images/Logo3.jpg" alt="">
+            </div>
+            <div class="col-1 m-auto col1">
+              <img src="images/Logo4.jpg" alt="">
+            </div>
+            <div class="col-1 m-auto col1">
+              <img src="images/Logo5.jpg" alt="">
+            </div>
+            <div class="col-1 m-auto col1">
+              <img src="images/Logo6.jpg" alt="">
+            </div>
+            <div class="col-1 m-auto col1">
+              <img src="images/Logo7.jpg" alt="">
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- community -->
+      <section class="comm">
+        <div class="container text-center py-3">
+          <h1>Manage your entire community <br> in a single system</h1>
+          <p>Who is Nextcent suitable for?</p>
+
+          <!-- <div class="row">
+              <div class="col-12 m-auto"> -->
+          <div class="row row1">
+            <div class="col-lg-4 col-11 px-5 py-3">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/Icon (1).png" class="my-3" alt="">
+                  <h1>Membership Organisations</h1>
+                  <p>Our membership management software provides full automation of membership renewals and
+                    payments</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-11 px-5 py-3">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/Icon (2).png" class="my-3" alt="">
+                  <h1>National <br> Associations</h1>
+                  <p>Our membership management software provides full automation of membership renewals and
+                    payments</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-11 px-5 py-3">
+              <div class="card">
+                <div class="card-body">
+                  <img src="images/Icon (3).png" class="my-3" alt="">
+                  <h1>Clubs And <br> Groups</h1>
+                  <p>Our membership management software provides full automation of membership renewals and
+                    payments</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- </div>
+          </div> -->
+
+        </div>
+      </section>
+
+
+      <!-- about start -->
+      <section class="about">
+        <div class="container py-3">
+          <div class="row row1">
+            <div class="col-lg-4">
+              <img src="images/unlock.png" alt="">
+            </div>
+            <div class="col-lg-8 my-5 px-5">
+              <h1>
+                The unseen of spending three <br>years at Pixelgrade
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan
+                quam
+                vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+                tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar,
+                aliquam
+                quam vitae, tempus sem. Donec elementum pulvinar odio.
+              </p>
+              <button class="btn3"><a href="">Learn more</a></button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- achieve -->
+      <section class="achieve bg-body-tertiary">
+        <div class="container py-4">
+          <div class="row ">
+
+            <div class="col-lg-6 my-5 col0">
+              <h1>Helping a local <br><span>business reinvent itself</span></h1>
+              <p>We reached here with our hard work and dedication</p>
+            </div>
+
+            <div class="col-lg-6">
+
+              <div class="row py-4 row1">
+                <div class="col-lg-6">
+
+                  <div class="row row2">
+                    <div class="col-lg-3">
+                      <img src="images/Iconaicon1.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                      <h2>2,245,341</h2>
+                      <h6>Members</h6>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-lg-6 ">
+
+                  <div class="row row2">
+                    <div class="col-lg-3">
+                      <img src="images/Iconaicon2.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                      <h2>46,328</h2>
+                      <h6>Clubs</h6>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="row row1">
+                <div class="col-lg -6">
+
+                  <div class="row row2">
+                    <div class="col-lg-3">
+                      <img src="images/Iconaicon3.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                      <h2>828,867</h2>
+                      <h6>Even Bookings</h6>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="col-lg-6">
+
+                  <div class="row row2">
+                    <div class="col-lg-3 ">
+                      <img src="images/Iconaicon4.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                      <h2>1,926,436</h2>
+                      <h6>Payments</h6>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Calender start -->
+      <section class="about ">
+        <div class="container py-3">
+          <div class="row row1">
+            <div class="col-lg-4 my-5">
+              <img src="images/calender.png" alt="">
+            </div>
+            <div class="col-lg-8 my-5 px-5">
+              <h1>
+                How to design your site footer like <br>we did
+
+              </h1>
+              <p>
+                Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie,
+                massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices
+                mollis.
+                In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In
+                euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla
+                commodo
+                faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis
+                libero.
+                Donec consectetur faucibus ipsum id gravida.
+              </p>
+              <button class="btn3">
+                <a href="">Learn more</a>
+              </button>
+
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- Customer/update start -->
+      <section class="customer bg-body-tertiary">
+        <div class="container py-3">
+
+          <div class="row row1">
+            <div class="col-lg-4 ">
+              <img src="images/custom.png" alt="" class="img1">
+            </div>
+            <div class="col-lg-8 py-3 px-5">
+              <p>
+                Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus
+                tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in,
+                gravida
+                enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec
+                molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales.
+                Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim
+                sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero
+                condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+              </p>
+              <h1>Tim Smith</h1>
+              <p class="p1">British Dragon Boat Racing Association
+              </p>
+
+              <div class="row py-3 m-auto row1">
+                <div class="col-lg-1 col-sm m-auto col1">
+                  <img src="images/Logoi1.png" alt="">
+                </div>
+                <div class="col-lg-1 col-sm m-auto col1">
+                  <img src="images/Logoi2.png" alt="">
+                </div>
+                <div class="col-lg-1 col-sm m-auto col1">
+                  <img src="images/Logoi3.png" alt="">
+                </div>
+                <div class="col-lg-1 col-sm m-auto col1">
+                  <img src="images/Logoi4.png" alt="">
+                </div>
+                <div class="col-lg-1  col-sm m-auto col1">
+                  <img src="images/Logoi5.png" alt="">
+                </div>
+                <div class="col-lg-1 col-sm m-auto col1">
+                  <img src="images/Logoi6.png" alt="">
+                </div>
+                <div class="col-lg-4 col-sm-3 m-auto col2">
+                  <a href="">Meet all customer -></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- upadate start -->
+      <section class="update py-5">
+        <div class="container text-center">
+
+          <div class="row row1">
+            <div class="col-lg-7 m-auto">
+
+              <h1>Caring is the new marketing</h1>
+              <p>
+                The Nexcent blog is the best place to read about the latest membership insights, trends and
+                more. See
+                who's joining the community, read about how our community are increasing their membership income
+                and
+                lot's more.
+                ​</p>
+            </div>
+
+          </div>
+
+          <!-- <div class="row">
+              <div class="col-lg-12 m-auto"> -->
+
+          <div class="row pb-5">
+
+            <div class="col-lg-4 col-12 my-2">
+              <div class="card row1">
+                <img src="images/image 181.png" alt="">
+
+              </div>
+              <div class="col-lg-10 col-7 m-auto">
+                <div class="card card1 py-3 px-3 bg-body-tertiary">
+                  <h2>Creating Streamlined Safeguarding Processes with OneRen</h2>
+                  <a href="">Readmore -></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-12 my-2">
+              <div class="card row1">
+                <img src="images/image 192.png" alt="">
+              </div>
+              <div class="col-lg-10 col-7 m-auto">
+                <div class="card card1 py-3 px-3  bg-body-tertiary">
+                  <h2>What are your safeguarding responsibilities and how can you manage them?</h2>
+                  <a href="">Readmore -></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-12  my-2">
+              <div class="card row1">
+                <img src="images/image 203.png" alt="">
+              </div>
+              <div class="col-lg-10 col-7 m-auto">
+                <div class="card card1 py-3 px-3 bg-body-tertiary">
+                  <h2>Revamping the Membership Model with Triathlon Australia </h2>
+                  <a href="">Readmore -></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- </div>
+          </div>
+  -->
+
+        </div>
+
+      </section>
+
+
+      <!-- Footer start -->
+      <section class="footer bg-body-tertiary">
+        <div class="container py-4">
+          <div class="row row1">
+            <div class="col-lg-12 text-center">
+              <h1>
+                Pellentesque suscipit <br> fringilla libero eu.
+              </h1>
+              <button class="btn5">
+                <a href="">Get a demo -></a>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- Footer1 start -->
+      <section class="footer1 ">
+        <div class="container py-4">
+          <div class="row py-4 row1">
+            <div class="col-11 m-auto">
+
+              <div class="row">
+
+                <div class="col-lg-5 py-3">
+                  <img class="pb-3" src="images/LogoM1.png" alt="">
+                  <p class="py-4">Copyright © 2020 Nexcent ltd. <br> All rights reserved</p>
+
+                  <div class="row row1">
+
+                    <div class="col-1 pe-4">
+                      <a href="">
+                        <img src="images/l1.png" alt="">
+                      </a>
+                    </div>
+                    <div class="col-1  px-4">
+                      <a href="">
+                        <img src="images/l2.png" alt="">
+                      </a>
+                    </div>
+                    <div class="col-1  px-4">
+                      <a href="">
+                        <img src="images/l3.png" alt="">
+                      </a>
+                    </div>
+                    <div class="col-1  px-4">
+                      <a href="">
+                        <img src="images/l4.png" alt="">
+                      </a>
+                    </div>
+                  </div>
+
+
+                </div>
+
+                <div class="col-lg-2">
+                  <h1>Company</h1>
+                  <h2><a href="">About us</a></h2>
+                  <h2><a href="">Blog</a></h2>
+                  <h2><a href="">Contact us</a></h2>
+                  <h2><a href="">Pricing</a></h2>
+                  <h2><a href="">Testimonials</a></h2>
+                </div>
+
+                <div class="col-lg-2">
+                  <h1>Support</h1>
+                  <h2><a href="">Help center</a></h2>
+                  <h2><a href="">Terms of service</a></h2>
+                  <h2><a href="">Legal</a></h2>
+                  <h2><a href="">Privacy policy</a></h2>
+                  <h2><a href="">Status</a></h2>
+                </div>
+
+                <div class="col-lg-3">
+                  <h1 class="pb-4">Stay up to date</h1>
+                  <div class="row row1">
+
+                    <div class="email">
+                      <input type="email" placeholder="  Your email address">
+                      <a href="index.html"><img src="images/send1.png" alt=""></a>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!--         
+    <h1>Username : <%= user.name %></h1> here through findone(email)  we can get all data by .name , .email..........
+    <h1>Email : <%= user.email %></h1>
+    
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <script src="/src/App.js"></script> -->
+
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <!-- Popper JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+
+</body>
+
+</html>
